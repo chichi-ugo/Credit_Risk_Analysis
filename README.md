@@ -8,11 +8,11 @@ In this analysis, we aim to use machine learning algorithms to make predictions 
 ### Resampling Models
 Before we can attain the desired results, we first needed to set the data up to be tested. We began by resampling the data using the scikit-learn and imbalanced-learn python libraries. As shown in the image below, the original dataset (after cleaning it to contain only the rowns and columns needed for analysis) has a total of  68,817 applications grouped between low and high risk.
 
-![]()
+![](https://github.com/chichi-ugo/Credit_Risk_Analysis/blob/main/images/tot_values.PNG?raw=true)
 
 This data is then split to create the models training and testing data
 
-![]()
+![](https://github.com/chichi-ugo/Credit_Risk_Analysis/blob/main/images/train_test_counts.PNG?raw=true)
 
 **Oversampling**
 
@@ -29,7 +29,7 @@ To address the class imbalance we see in the data, one of the methods used is a 
   
 |                 |                   |
 |-----------------|-------------------|
-| ![O_Samp cm]() | ![O_Samp class]() |
+| ![O_Samp cm](https://github.com/chichi-ugo/Credit_Risk_Analysis/blob/main/images/naive_Osamp_cm.PNG?raw=true) | ![O_Samp class](https://github.com/chichi-ugo/Credit_Risk_Analysis/blob/main/images/naive_Osamp_class.PNG?raw=true) |
 
 
 **SMOTE Oversampling**
@@ -47,7 +47,7 @@ Another resampling method we employed is SMOTE, or synthetic minority oversampli
   
 |                 |                   |
 |-----------------|-------------------|
-| ![SMOTE cm]() | ![SMOTE class]() |
+| ![SMOTE cm](https://github.com/chichi-ugo/Credit_Risk_Analysis/blob/main/images/smote_cm.PNG?raw=true) | ![SMOTE class](https://github.com/chichi-ugo/Credit_Risk_Analysis/blob/main/images/smote_class.PNG?raw=true) |
 
 
 **Undersampling**
@@ -65,7 +65,7 @@ The third resampling method used in this analysis is the ClusterCentroids method
   
 |                 |                   |
 |-----------------|-------------------|
-| ![U_Samp cm]() | ![U_Samp class]() |
+| ![U_Samp cm](https://github.com/chichi-ugo/Credit_Risk_Analysis/blob/main/images/Usamp_cm.PNG?raw=true) | ![U_Samp class](https://github.com/chichi-ugo/Credit_Risk_Analysis/blob/main/images/Usamp_class.PNG?raw=true) |
 
 
 **Combination (Over and Under) Sampling**
@@ -83,7 +83,7 @@ The final resampling method that was employed in this analysis is SMOTEENN, a co
   
 |                 |                   |
 |-----------------|-------------------|
-| ![SMOTEENN cm]() | ![SMOTEENN class]() |
+| ![SMOTEENN cm](https://github.com/chichi-ugo/Credit_Risk_Analysis/blob/main/images/smoteenn_cm.PNG?raw=true) | ![SMOTEENN class](https://github.com/chichi-ugo/Credit_Risk_Analysis/blob/main/images/smoteenn_class.PNG?raw=true) |
 
 ### Enseble Classifiers
 The concept of ensemble learning is the process of combining multiple models, like decision tree algorithms, to help improve the accuracy and robustness, as well as decrease variance of the model, and therefore increase the overall performance of the model. In this analysis, we employed two enseble classifier methods.
@@ -103,7 +103,7 @@ In the random forest method, the algorithm will sample the data and build severa
   
 |                 |                   |
 |-----------------|-------------------|
-| ![BRRC cm]() | ![BRRC class]() |
+| ![BRRC cm](https://github.com/chichi-ugo/Credit_Risk_Analysis/blob/main/images/BRF_cm.PNG?raw=true) | ![BRRC class](https://github.com/chichi-ugo/Credit_Risk_Analysis/blob/main/images/BRF_class.PNG?raw=true) |
 
 **Easy Ensemble Classifier Model**
 
@@ -118,7 +118,7 @@ In the random forest method, the algorithm will sample the data and build severa
   
 |                 |                   |
 |-----------------|-------------------|
-| ![EEC cm]() | ![EEC class]() |
+| ![EEC cm](https://github.com/chichi-ugo/Credit_Risk_Analysis/blob/main/images/EE_cm.PNG?raw=true) | ![EEC class](https://github.com/chichi-ugo/Credit_Risk_Analysis/blob/main/images/EE_class.PNG?raw=true) |
 
 ## Summary
 In comparing the six different models, we look specifically at the accuracy, precision, and sensitivity scores to distinguish which test may be more useful. The accuracy score assesses the performance of the model (a higher accuracy score indicateds that the model is a better predictor). The precision score, also known as the positive predictive value (PPV), tells us the liklihood that the prediction made is True (Ratio of True positives to Total Positives - both true and false positives). Finally, the recall (sensitivity) score tells us the proportion of all True cases athat are predicted by the model (ratio of predicted True positives to all actual positives - both true positives and false negatives).
